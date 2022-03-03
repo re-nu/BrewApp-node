@@ -129,9 +129,9 @@ app.post('/liveSpaces',async(request,response)=>{
 })
 
 app.get('/liveSpaces',async(request,response)=>{
-    const filter=request.body
+    // const filter=request.body
     console.log(filter)
-    const result=await client.db("b28wd").collection("brewApp").find(filter).toArray()
+    const result=await client.db("b28wd").collection("brewApp").find({}).toArray()
     response.send(result)
 })
 
